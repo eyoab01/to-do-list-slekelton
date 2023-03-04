@@ -18,7 +18,7 @@ const todolist = [
   },
 ];
 // display
-const list = document.querySelector('.todolist');
+const list = document.querySelector('.todos');
 todolist.forEach((o) => {
   list.innerHTML += `
   <div class = "tree"> <div class = "list">
