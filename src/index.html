@@ -2,23 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>To Do List skeleton</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>To do list App</title>
 </head>
 
 <body>
-    <div class="border">
-        <div class="style head">
-            <h1>Today's To Do</h1>
-            <i class="fa fa-refresh fa-2x"></i>
-        </div>
-        <div class="style"><input type="text" class="text" placeholder="Add to your list ..."></div>
-        <div class="todos"></div>
-        <div class="style btn"><a href="" class="button2">Clear all completed</a></div>
+  <div id="todo-container">
+    <div id="header-part">
+      <span>Today's To Do list</span>
+      <span class="material-symbols-outlined md-30">
+        sync
+      </span>
     </div>
+    <div id="add-to-do">
+      <input placeholder="Add to your list...">
+      <span id="add-task-button" class="material-symbols-outlined md-30">
+        keyboard_return
+      </span>
+    </div>
+    <ul id="todo-list">
+
+    </ul>
+    <button id="btn-Clear-completed-todos">Clear all completed</button>
+  </div>
 </body>
 
 </html>
