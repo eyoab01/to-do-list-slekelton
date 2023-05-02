@@ -73,7 +73,7 @@ go to your project folder and right click on the index.html file and select open
 ### Run tests
 
 To run tests, do the following step:
-go to your project folder and right click on the index.html or (https://github.com/eyoab01/to-do-list-slekelton)
+go to your project folder and right click on the index.html 
 
 ### Deployment
 
@@ -116,7 +116,7 @@ I would like to give my bigest appreciation microverses
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT] (https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT] (../LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
