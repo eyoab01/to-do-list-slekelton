@@ -1,32 +1,34 @@
-import './style.css';
-// arrow todolistect
-const todolist = [
-  {
-    discription: 'js',
-    completed: '',
-    index: 1,
-  },
-  {
-    discription: 'java',
-    completed: '',
-    index: 2,
-  },
-  {
-    discription: 'html',
-    completed: '',
-    index: 3,
-  },
-];
-// display
-const list = document.querySelector('.todos');
-todolist.forEach((o) => {
-  list.innerHTML += `
-  <div class = "tree"> <div class = "list">
-    <input type="checkbox" id="do1" name="do1" value="list">
-    <h2>${o.discription}</h2>
-    </div>
-    <i class="fa fa-trash fa-2x delete"></i>
-    <i class="fa delete1">&#xf142;</i></div>
-   
-  `;
+import './style.scss';
+import {
+  AddToDoList,
+  setTasks,
+  showTasks,
+  GetToDoList,
+  updateLocalStorage,
+} from './modules/AddToDoItems.js';
+import { clearAllCompletedTasks } from './modules/Completed.js';
+
+const newTodolistInput = document.querySelector('#add-to-do > input');
+const addTaskButton = document.querySelector('#add-task-button');
+const clearCompletedTasksButton = document.querySelector('#btn-Clear-completed-todos');
+
+newTodolistInput.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    AddToDoList(newTodolistInput);
+    showTasks();
+  }
 });
+
+addTaskButton.addEventListener('click', () => {
+  AddToDoList(newTodolistInput);
+  showTasks();
+});
+
+clearCompletedTasksButton.addEventListener('click', () => {
+  setTasks(clearAllCompletedTasks(GetToDoList()));
+  updateLocalStorage();
+  showTasks();
+});
+
+setTasks(JSON.parse(localStorage.getItem('tasks')) || []);
+showTasks();
