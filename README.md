@@ -116,7 +116,7 @@ I would like to give my bigest appreciation microverses
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT] (../LICENSE) licensed.
+This project is [MIT] (..to-do-list-slekelton/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
